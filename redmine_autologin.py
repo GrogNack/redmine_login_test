@@ -5,18 +5,9 @@ from fixture import app
 import unittest, time, re
 from model.user_data import User
 
-
-
-def login(driver, user):
-    driver.find_element_by_id("username").clear()
-    driver.find_element_by_id("username").send_keys(user.username)
-    driver.find_element_by_id("password").clear()
-    driver.find_element_by_id("password").send_keys(user.password)
-    driver.find_element_by_id("login-submit").click()
-
 def test_login(app):
-    app.driver.get("https://task.htc-cs.com/login?back_url=http%3A%2F%2Ftask.htc-cs.com%2F")
-    login(app.driver, User.Admin())
+    app.go_to_home_page()
+    app.login(User.Admin())
 
 
 # def test_login(driver):
