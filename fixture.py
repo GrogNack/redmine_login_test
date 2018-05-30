@@ -5,6 +5,6 @@ import pytest
 @pytest.fixture
 def app(request):
     driver = webdriver.Firefox()
-    driver.implicitly_wait(30)
+    # driver.implicitly_wait(30)
     request.addfinalizer(driver.quit)
     return Application(driver)

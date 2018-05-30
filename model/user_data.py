@@ -6,4 +6,4 @@ class User(object):
 
     @classmethod
     def Admin(cls):
-        return cls(username="mkazantsev", password="119074")
+        return cls(username="mkazantsev", password="28741")
